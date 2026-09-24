@@ -1,5 +1,9 @@
 # flash-to-pim
 
+![Course](https://img.shields.io/badge/course-NCKU%20Emerging%20Memory%20Techniques-555)
+![Topics](https://img.shields.io/badge/topics-NAND%20Flash%20%C2%B7%20PCM%20%C2%B7%20PIM%20%C2%B7%20SMR%20%C2%B7%20KV%20stores-1F6FEB)
+![License: MIT](https://img.shields.io/badge/license-MIT-yellow)
+
 **Paper critiques and labs on emerging memory & storage systems — from NAND Flash to Processing-in-Memory.**
 
 Coursework for *Introduction to Emerging Memory Techniques* at National Cheng Kung University (NCKU), Department of Computer Science and Information Engineering — Fall 2026 (115-1).
