@@ -73,6 +73,10 @@ Conventions: critiques are named `NN-paper-title.md`, matching their number on t
 
 Everything in this repository is my own writing. The papers and course slides belong to their authors, publishers and instructor, and are deliberately **not** included — please read the originals from the publishers. Critiques express my own opinions as a student reader.
 
+## License
+
+[MIT](LICENSE) © 2026 Adam Fan. This covers my own writing and code in this repository, not the papers or course materials referenced here.
+
 ## Author
 
 **Adam Fan** — [@Adam010341](https://github.com/Adam010341)
