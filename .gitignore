@@ -1,0 +1,9 @@
+# Copyrighted course material: read locally, never commit
+papers/
+slides/
+
+# OS / tooling noise
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
