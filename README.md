@@ -4,23 +4,17 @@
 ![Topics](https://img.shields.io/badge/topics-NAND%20Flash%20%C2%B7%20PCM%20%C2%B7%20PIM%20%C2%B7%20SMR%20%C2%B7%20KV%20stores-1F6FEB)
 ![License: MIT](https://img.shields.io/badge/license-MIT-yellow)
 
-**Paper critiques and labs on emerging memory & storage systems, from NAND Flash to Processing-in-Memory.**
+Paper critiques and labs on emerging memory and storage systems, from NAND Flash to Processing-in-Memory.
 
 Coursework for *Introduction to Emerging Memory Techniques* at National Cheng Kung University (NCKU), Department of Computer Science and Information Engineering, Fall 2026 (115-1).
 
-## Topics
+The course covers NAND Flash and SSDs (FTL, garbage collection, wear-leveling, 3D NAND), phase-change memory, processing-in-memory, shingled magnetic recording disks, and SSD-conscious key-value stores such as LSM-trees.
 
-- **NAND Flash & SSDs**: FTL, garbage collection, wear-leveling, parallelism, 3D NAND scaling
-- **Phase-Change Memory (PCM)**: non-volatile, byte-addressable memory with slower, costlier writes that wear the cell
-- **Processing-in-Memory (PIM)**: putting compute next to the data
-- **Shingled Magnetic Recording (SMR)**: growing disk capacity with overlapping tracks that must be written sequentially
-- **SSD-conscious key-value stores**: redesigning software such as LSM-trees for flash
+## What's here
 
-## Contents
-
-- **Paper critiques**: critiques of the eight papers on the course reading list.
-- **Labs**: six labs, three SSD-related and three PIM-related. Added under `labs/` as they are completed.
-- **Paper presentation**: materials for the 20-minute in-class presentation. Added once a paper is assigned.
+- Critiques of the eight papers on the reading list.
+- Six labs, three on SSDs and three on PIM. I'll add them under `labs/` as I finish them.
+- Materials for the 20-minute in-class paper presentation, once a paper is assigned.
 
 | # | Paper | Area | Critique |
 |:-:|---|---|---|
@@ -35,14 +29,14 @@ Coursework for *Introduction to Emerging Memory Techniques* at National Cheng Ku
 
 Each critique has five sections: Overview, Contributions, Room for Improvement, Possible Future Work, Overall Assessment.
 
-### Featured: PC1, *Design Tradeoffs for SSD Performance*
+## PC1: Design Tradeoffs for SSD Performance
 
 Agrawal et al., *2008 USENIX Annual Technical Conference*. [Full critique](paper-critiques/01-design-tradeoffs-for-ssd-performance.md)
 
-- **The paper.** An early taxonomy of SSD internal design trade-offs (logical page size, allocation pool, over-provisioning, command interleaving, ganging, cleaning), evaluated on a DiskSim-based simulator with real enterprise traces.
-- **Pushback.** The simulator is closed-source and not validated against real hardware. It has no DRAM write cache, which likely exaggerates random-write latency and garbage collection. The wear-leveling experiment scales block endurance from 100,000 down to 50 cycles.
-- **Hindsight.** It anticipated the host-to-drive "unused space" hint that became TRIM, and captured write amplification without naming it.
-- **Future work.** Open-source and validate the simulator, extend to MLC flash, and quantify the controller-memory cost of page-level mapping tables at terabyte scale.
+- The paper is an early taxonomy of SSD design trade-offs (logical page size, allocation pool, over-provisioning, command interleaving, ganging, cleaning). It uses a DiskSim-based simulator driven by real enterprise traces.
+- The simulator is closed-source and not validated against real hardware. It has no DRAM write cache, which probably inflates random-write latency and garbage collection. The wear-leveling experiment scales block endurance from 100,000 down to 50 cycles.
+- It anticipated the host-to-drive "unused space" hint that became TRIM, and described write amplification without naming it.
+- Future work I suggest: open-source and validate the simulator, extend it to MLC flash, and measure the controller-memory cost of page-level mapping tables at terabyte scale.
 
 ## Layout
 
@@ -63,6 +57,4 @@ Everything here is my own writing. The papers and course slides belong to their 
 
 [MIT](LICENSE) © 2026 Adam Fan. This covers my own writing and code, not the papers or course materials referenced here.
 
-## Author
-
-**Adam Fan** — [@Adam010341](https://github.com/Adam010341)
+Adam Fan, [@Adam010341](https://github.com/Adam010341)
